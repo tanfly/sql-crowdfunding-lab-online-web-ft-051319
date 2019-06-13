@@ -4,7 +4,7 @@ def selects_the_titles_of_all_projects_and_their_pledge_amounts_alphabetized_by_
 "SELECT projects.title FROM users
   INNER JOIN pledges
   ON users.id = pledges.user_id
-
+  JOIN projects ON cats_owners.cat_id = cats.id
   GROUP BY projects.title ASC, pledges.amount;"
 end
 
