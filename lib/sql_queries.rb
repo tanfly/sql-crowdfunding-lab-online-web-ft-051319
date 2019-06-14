@@ -45,7 +45,7 @@ end
 "SELECT projects.category, pledges.amount
   FROM pledges 
   INNER JOIN projects ON pledges.project_id = projects.id
-  GROUP BY category HAVING category = 'music';"
+  WHERE category HAVING category = 'music';"
 end
 
 def selects_the_category_name_and_the_sum_total_of_the_all_its_pledges_for_the_books_category
